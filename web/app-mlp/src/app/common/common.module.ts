@@ -5,6 +5,7 @@ import { CommonRoutingModule } from './common-routing.module';
 import { LoginComponent } from './login/login.component';
 import{MatFormFieldModule,MatInputModule,MatButtonModule, MatToolbarModule, MatIconModule} from '@angular/material';
 import{FormsModule} from '@angular/forms';
+import {HttpClientModule}  from '@angular/common/http';
 import { SignupComponent } from './signup/signup.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
@@ -15,10 +16,11 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     MatFormFieldModule,
     MatInputModule,MatButtonModule,MatToolbarModule,MatIconModule,
     FlexLayoutModule,
-    CommonRoutingModule
+    CommonRoutingModule,
+    HttpClientModule
   ],
   declarations: [LoginComponent, SignupComponent, WelcomeComponent, ToolbarComponent], 
   exports: [FormsModule,MatFormFieldModule,MatInputModule,MatButtonModule,MatToolbarModule,MatIconModule,
-    FlexLayoutModule]
+    FlexLayoutModule,HttpClientModule]
 })
 export class CommonModule {  }
